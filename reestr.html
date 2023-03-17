@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Реестр ДПД</title>
+        <link rel="stylesheet" href="./styles/">
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1>Реестр ДПД (Измайловский Вал)</h1>
+        </header>
+        <main>
+            <div class="search">
+                <form class="search_form" action="#" method="post">
+                    <p class="search_text">
+                        Введите номер (кадастровый, условный или инвентарный) используя только цифры (пример: 290752014060)
+                        Минимальное количество цифр для ввода - 8. Знак _ (нижнее подчеркивание) может использоваться в 
+                        качестве переменного аргумента при поиске
+                    </p>
+                    <input type="text" name="search" placeholder="Введите номер" required >
+                    <button class="search_button" type="submit" name="search_submit">Поиск</button>
+                </form>
+            </div>
+            <div class="doc_id">
+                <form class="doc_id_form">
+                    <p class="doc_id_text">
+                        Чтобы изменить запись введите идентификатор документа. Статус, комментарий, населенный пункт, 
+                        улицу, номер дома и актуальный кадастровый номер вводить при необходимости. Идентификатор 
+                        документа указан в поисковой выдаче ниже.
+                    </p>
+                    <input type="text" name="id_doc" placeholder="Идентификатор документа" required >
+                    <select size="3">
+                        <option disabled>
+                            Статус
+                        </option>
+                        <option>
+                            Найден, проверен
+                        </option>
+                        <option>
+                            Найден, не проверен
+                        </option>
+                        <option>
+                            Не найден
+                        </option>
+                    </select>
+                    <input type="text" name="id_doc_comment" placeholder="Комментарий" required>
+                    <input type="text" name="id_doc_city" placeholder="Населённый пункт" required>
+                    <input type="text" name="id_doc_addr" placeholder="Улица" required>
+                    <input type="text" name="id_doc_house" placeholder="Номер дома" required>
+                </form>
+                <p>
+                    Актуальный кадастровый или иной номер (с учетом символов)
+                </p>
+                <input type="text" name="actual_number" placeholder="" required>
+            </div>
+            <button class="submit_button" type="submit" name="submit">Изменить запись</button>
+        </main>
+    </body>
+</html>
