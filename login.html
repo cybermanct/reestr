@@ -6,26 +6,19 @@
         <link rel="stylesheet" href="./styles/login.css">
     </head>
     <body class="body">
-        <header class="header">
-            <h1>Реестр ДПД</h1>
-        </header>
-        <div class="form_auth_block">
-            <div class="form_auth_block_content">
-              <p class="form_auth_block_head_text">
-                Авторизация
-              </p>
-              <form class="form_auth_style" action="#" method="post">
-                <label>
-                    Введите Ваш имейл
-                </label>
-                <input type="email" name="auth_email" placeholder="Введите Ваш имейл" required >
-                <label>
-                    Введите Ваш пароль
-                </label>
-                <input type="password" name="auth_pass" placeholder="Введите пароль" required >
-                <button class="form_auth_button" type="submit" name="form_auth_submit">Войти</button>
-              </form>
-            </div>
-          </div>
+          <div class="registration-cssave">
+            <form>
+                <h3 class="text-center">Реестр ДПД</h3>
+                <div class="form-group">
+                    <input class="form-control item" type="text" name="username" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="Логин" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control item" type="password" name="Пароль" minlength="6" id="password" placeholder="Пароль" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block create-account" type="submit">Вход в аккаунт</button>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
